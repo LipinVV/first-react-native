@@ -1,16 +1,17 @@
 import { StyleSheet, Text, View } from 'react-native';
-import { Input } from './shared/Input/input';
-import { Colors, Gaps } from './shared/tokens';
-import PurpleSchoolIcon from './assets/svgIcons/school-logo';
-import { Button } from './shared/Button/button';
-import { AlertBox } from './shared/AlertBox/alert-box';
+import { Input } from '../shared/Input/input';
+import { Colors, Gaps } from '../shared/tokens';
+import PurpleSchoolIcon from '../assets/svgIcons/school-logo';
+import { Button } from '../shared/Button/button';
+import { AlertBox } from '../shared/AlertBox/alert-box';
 import { useState } from 'react';
 
-export default function App() {
+export default function Index() {
 	const [error, setError] = useState<string | undefined>(undefined);
 
 	const alertHandler = () => {
 		setError('Incorrect login or password');
+		console.log('boom');
 		// Alert.alert('Error', 'Incorrect login or password', [{text: 'All right', onPress: () => {}, style: 'cancel'}])
 	};
 
