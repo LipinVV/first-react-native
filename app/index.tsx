@@ -5,13 +5,13 @@ import PurpleSchoolIcon from '../assets/svgIcons/school-logo';
 import { Button } from '../shared/Button/button';
 import { AlertBox } from '../shared/AlertBox/alert-box';
 import { useState } from 'react';
+import { Link } from 'expo-router';
 
 export default function Index() {
 	const [error, setError] = useState<string | undefined>(undefined);
 
 	const alertHandler = () => {
 		setError('Incorrect login or password');
-		console.log('boom');
 		// Alert.alert('Error', 'Incorrect login or password', [{text: 'All right', onPress: () => {}, style: 'cancel'}])
 	};
 
@@ -25,7 +25,9 @@ export default function Index() {
 					<Input placeholder={'password'} placeholderTextColor={Colors.gray} isPassword={true} />
 					<Button onPress={alertHandler} title={'Log in'} />
 				</View>
-				<Text>Restore password</Text>
+				<Link href={'/restore'}>
+					<Text>Restore password</Text>
+				</Link>
 			</View>
 		</View>
 	);
@@ -45,8 +47,5 @@ const styles = StyleSheet.create({
 	form: {
 		alignSelf: 'stretch',
 		gap: Gaps.gap16,
-	},
-	logo: {
-		width: 220,
 	},
 });
