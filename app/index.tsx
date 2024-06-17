@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { Input } from '../shared/Input/input';
+import { StyleSheet, View } from 'react-native';
 import { Colors, Gaps } from '../shared/tokens';
 import PurpleSchoolIcon from '../assets/svgIcons/school-logo';
-import { Button } from '../shared/Button/button';
-import { AlertBox } from '../shared/AlertBox/alert-box';
+import { Button } from '../shared/Button/Button';
+import { AlertBox } from '../shared/AlertBox/AlertBox';
 import { useState } from 'react';
-import { Link } from 'expo-router';
+import { CustomInput } from '../shared/CustomInput/CustomInput';
+import { CustomLink } from '../shared/CustomLink/CustomLink';
 
 export default function Index() {
 	const [error, setError] = useState<string | undefined>(undefined);
@@ -21,13 +21,15 @@ export default function Index() {
 			<View style={styles.content}>
 				<PurpleSchoolIcon />
 				<View style={styles.form}>
-					<Input placeholder={'email'} placeholderTextColor={Colors.gray} />
-					<Input placeholder={'password'} placeholderTextColor={Colors.gray} isPassword={true} />
+					<CustomInput placeholder={'email'} placeholderTextColor={Colors.gray} />
+					<CustomInput
+						placeholder={'password'}
+						placeholderTextColor={Colors.gray}
+						isPassword={true}
+					/>
 					<Button onPress={alertHandler} title={'Log in'} />
 				</View>
-				<Link href={'/restore'}>
-					<Text>Restore password</Text>
-				</Link>
+				<CustomLink href={'/restore'} text={'Restore password'} />
 			</View>
 		</View>
 	);

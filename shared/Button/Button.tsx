@@ -1,10 +1,10 @@
 import {
+	Animated,
+	GestureResponderEvent,
 	Pressable,
 	PressableProps,
 	StyleSheet,
 	Text,
-	Animated,
-	GestureResponderEvent,
 } from 'react-native';
 import { Colors, Fonts, Radius } from '../tokens';
 
@@ -63,5 +63,6 @@ const styles = StyleSheet.create({
 	title: {
 		color: Colors.white,
 		fontSize: Fonts.f18,
+		fontFamily: Fonts.regular,
 	},
 });

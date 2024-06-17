@@ -34,7 +34,10 @@ export const AlertBox = ({ error }: IAlertBox) => {
 
 	return (
 		<Animated.View
-			style={{ ...styles.error, transform: [{ translateY: animatedFadingValue } as any] }}
+			style={{
+				...styles.error,
+				transform: [{ translateY: animatedFadingValue } as any],
+			}}
 			onLayout={onEnterLayout}
 		>
 			<Text style={styles.text}>{error}</Text>
@@ -54,5 +57,6 @@ const styles = StyleSheet.create({
 		fontSize: Fonts.f16,
 		color: Colors.white,
 		textAlign: 'center',
+		fontFamily: Fonts.regular,
 	},
 });
