@@ -31,7 +31,7 @@ export default function RootLayout() {
 					}, // стили для общей обёртки
 				}}
 			>
-				<Stack.Screen name={'index'} />
+				<Stack.Screen name={'login'} />
 				<Stack.Screen name={'restore'} />
 			</Stack>
 		</SafeAreaProvider>

@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { CustomInput } from '../shared/CustomInput/CustomInput';
 import { CustomLink } from '../shared/CustomLink/CustomLink';
 
-export default function Index() {
+export default function Login() {
 	const [error, setError] = useState<string | undefined>(undefined);
 
 	const alertHandler = () => {
